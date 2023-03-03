@@ -1,5 +1,5 @@
 
-##About
+<b>##About</b>
 
 Laravel 9 Socialite with User Authentication
 
@@ -7,9 +7,9 @@ laravel/socialite
 "version": "v5.6.1"
 "php": "^7.2|^8.0"
 
-##Steps For Social Login
+<b>##Steps For Social Login</b>
 
-Login with Google
+<b>Login with Google</b>
 Create Laravel project => composer create-project laravel/laravel example-app
 Install Jetstream => 
 composer require laravel/jetstream
@@ -26,26 +26,25 @@ In your brand new project click on APIs and Services
 
 Select credentials and choose first option OAuth Client ID here
 
-https://www.itsolutionstuff.com/upload/laravel-login-google-2.png?ezimgfmt=rs:836x360/rscb5/ng:webp/ngcb5
+<img src="https://www.itsolutionstuff.com/upload/laravel-login-google-2.png?ezimgfmt=rs:836x360/rscb5/ng:webp/ngcb5">
 
 add your Application Type,Name and Authorized Redirect URIs
 
-https://www.itsolutionstuff.com/upload/laravel-login-google-3.png?ezimgfmt=rs:836x390/rscb5/ng:webp/ngcb5
+<img src="https://www.itsolutionstuff.com/upload/laravel-login-google-3.png?ezimgfmt=rs:836x390/rscb5/ng:webp/ngcb5">
 
 After creating this account you can find client id and secret
 
-
-Login with Facebook
+<b>Login with Facebook</b>
 Create Facebook App on https://developers.facebook.com/
 After registering to this website click on My app and Create app
 
-https://www.itsolutionstuff.com/upload/laravel-login-with-facebook-1.png?ezimgfmt=rs:836x394/rscb5/ng:webp/ngcb5
+<img src="https://www.itsolutionstuff.com/upload/laravel-login-with-facebook-1.png?ezimgfmt=rs:836x394/rscb5/ng:webp/ngcb5">
 
-https://www.itsolutionstuff.com/upload/laravel-login-with-facebook-2.png?ezimgfmt=rs:836x394/rscb5/ngcb5/notWebP
+<img src="https://www.itsolutionstuff.com/upload/laravel-login-with-facebook-2.png?ezimgfmt=rs:836x394/rscb5/ngcb5/notWebP">
 
 Select consumer and add App Display Name,App Contact Email now 
 
-https://www.itsolutionstuff.com/upload/laravel-login-with-facebook-3.png?ezimgfmt=rs:836x394/rscb5/ngcb5/notWebP
+<img src="https://www.itsolutionstuff.com/upload/laravel-login-with-facebook-3.png?ezimgfmt=rs:836x394/rscb5/ngcb5/notWebP">
 
 click on create App ID
 After creating app select facebook login click on web option
@@ -56,7 +55,7 @@ Enter Redirect URI validator and click on Check URI button and then save
 Click on Settings option and select Basic here you can find your
 APP ID and APP SECRET
 
-https://www.itsolutionstuff.com/upload/laravel-login-with-facebook-4.png?ezimgfmt=rs:836x394/rscb5/ngcb5/notWebP
+<img src="https://www.itsolutionstuff.com/upload/laravel-login-with-facebook-4.png?ezimgfmt=rs:836x394/rscb5/ngcb5/notWebP">
 
 You can copy it and congigure in .env file 
 Now in your laravel project set your google and facebook Client_id,Client_secret,redirect URL in config/services.php file
