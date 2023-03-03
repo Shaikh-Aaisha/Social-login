@@ -1,11 +1,3 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
-
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
 ##About
 
@@ -30,7 +22,7 @@ Create Google App on https://console.cloud.google.com
 After creating an account on above website create new project 
 In your brand new project click on APIs and Services
 
-https://www.itsolutionstuff.com/upload/laravel-login-google-1.png?ezimgfmt=rs:836x390/rscb5/ng:webp/ngcb5
+<img src="https://www.itsolutionstuff.com/upload/laravel-login-google-1.png?ezimgfmt=rs:836x390/rscb5/ng:webp/ngcb5">
 
 Select credentials and choose first option OAuth Client ID here
 
