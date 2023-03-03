@@ -7,60 +7,74 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+##About
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Laravel 9 Socialite with User Authentication
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+laravel/socialite 
+"version": "v5.6.1"
+"php": "^7.2|^8.0"
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+##Steps For Social Login
 
-## Learning Laravel
+Login with Google
+Create Laravel project => composer create-project laravel/laravel example-app
+Install Jetstream => 
+composer require laravel/jetstream
+php artisan jetstream:install livewire
+npm install
+npm run dev
+php artisan migrate
+Install Socialite => composer require laravel/socialite
+Create Google App on https://console.cloud.google.com
+After creating an account on above website create new project 
+In your brand new project click on APIs and Services
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+https://www.itsolutionstuff.com/upload/laravel-login-google-1.png?ezimgfmt=rs:836x390/rscb5/ng:webp/ngcb5
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+Select credentials and choose first option OAuth Client ID here
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+https://www.itsolutionstuff.com/upload/laravel-login-google-2.png?ezimgfmt=rs:836x360/rscb5/ng:webp/ngcb5
 
-## Laravel Sponsors
+add your Application Type,Name and Authorized Redirect URIs
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+https://www.itsolutionstuff.com/upload/laravel-login-google-3.png?ezimgfmt=rs:836x390/rscb5/ng:webp/ngcb5
 
-### Premium Partners
+After creating this account you can find client id and secret
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
 
-## Contributing
+Login with Facebook
+Create Facebook App on https://developers.facebook.com/
+After registering to this website click on My app and Create app
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+https://www.itsolutionstuff.com/upload/laravel-login-with-facebook-1.png?ezimgfmt=rs:836x394/rscb5/ng:webp/ngcb5
 
-## Code of Conduct
+https://www.itsolutionstuff.com/upload/laravel-login-with-facebook-2.png?ezimgfmt=rs:836x394/rscb5/ngcb5/notWebP
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Select consumer and add App Display Name,App Contact Email now 
 
-## Security Vulnerabilities
+https://www.itsolutionstuff.com/upload/laravel-login-with-facebook-3.png?ezimgfmt=rs:836x394/rscb5/ngcb5/notWebP
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+click on create App ID
+After creating app select facebook login click on web option
+Enter your site URL and save
+Now go to facebook login inside this click on settings option
+Enter Valid OAuth Redirect URIs and click on save changes button
+Enter Redirect URI validator and click on Check URI button and then save
+Click on Settings option and select Basic here you can find your
+APP ID and APP SECRET
 
-## License
+https://www.itsolutionstuff.com/upload/laravel-login-with-facebook-4.png?ezimgfmt=rs:836x394/rscb5/ngcb5/notWebP
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+You can copy it and congigure in .env file 
+Now in your laravel project set your google and facebook Client_id,Client_secret,redirect URL in config/services.php file
+You need to add GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET and FACEBOOK_CLIENT_ID, FACEBOOK_CLIENT_SECRET in .env file
+Add column in table using this command 
+php artisan make:migration add_google_id_column
+php artisan make:migration add_facebook_id_column
+Also add this google_idand facebook_id in your model
+Creae routes and Define functions in Controller
+Update blade login with google and facebook button and set the route
+All the required step is done now you have to run the command php artisan serve
+
+
