@@ -57,14 +57,14 @@ APP ID and APP SECRET<br>
 
 <img src="https://www.itsolutionstuff.com/upload/laravel-login-with-facebook-4.png?ezimgfmt=rs:836x394/rscb5/ngcb5/notWebP"><br>
 
-You can copy it and congigure in .env file <br>
+You can copy it and configure in .env file <br>
 Now in your laravel project set your google and facebook Client_id,Client_secret,redirect URL in config/services.php file<br>
 You need to add GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET and FACEBOOK_CLIENT_ID, FACEBOOK_CLIENT_SECRET in .env file<br>
 Add column in table using this command <br>
 php artisan make:migration add_google_id_column<br>
 php artisan make:migration add_facebook_id_column<br>
 Also add this google_idand facebook_id in your model<br>
-Creae routes and Define functions in Controller<br>
+Create routes and Define functions in Controller<br>
 Update blade login with google and facebook button and set the route<br>
 All the required step is done now you have to run the command php artisan serve<br>
 
